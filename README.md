@@ -189,6 +189,12 @@ Para listar todas las fuentes disponibles:
 fc-list
 ```
 
+## Lector de PDF
+
+El mejor lector de pdf que he encontrado es zathura
+```bash
+sudo pacman -S zathura zathura-pdf-mupdf
+```
 
 ## Audio
 
