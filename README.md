@@ -784,3 +784,6 @@ y para *alacritty*, [este](https://github.com/antoniosarosi/dotfiles/tree/master
 | **[scrot](https://wiki.archlinux.org/index.php/Screen_capture)**      | Captura de pantalla                |
 | **[redshift](https://wiki.archlinux.org/index.php/Redshift)**         | Cuida tus ojos                     |
 | **[trayer](https://www.archlinux.org/packages/extra/x86_64/trayer/)** | Systray                            |
+
+atentamente su servidor, tratare de darle unas pequeñas actualizaciones para que se vea mucho mejor y
+tal vez algun dia estos archivos tengan algun tipo de valor :)
