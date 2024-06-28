@@ -5,23 +5,24 @@
 # Qtile workspaces
 
 from libqtile.config import Key, Group
-from libqtile.command import lazy
+from libqtile.lazy import lazy
 from .keys import mod, keys
 
 
 # Get the icons at https://www.nerdfonts.com/cheat-sheet (you need a Nerd Font)
-# Icons: 
-# nf-fa-firefox, 
-# nf-fae-python, 
-# nf-dev-terminal, 
-# nf-fa-code, 
-# nf-oct-git_merge, 
+# Icons:
+# nf-fa-chrome
+# nf-fae-python,
+# nf-dev-terminal,
+# nf-fa-music,
+# nf-oct-git_merge,
 # nf-linux-docker,
-# nf-mdi-image, 
-# nf-mdi-layers
+# nf-mdi-image,
+# nf-mdi-layers,
+# nf-md-monitor_eye
 
 groups = [Group(i) for i in [
-    "   ", "   ", "   ", "   ", "  ", "   ", "   ", "   ", "   ",
+    "   ", "   ", "   ", "   ", "  ", "   ", "   ", " 󰌨  ", " 󱎴  ",
 ]]
 
 for i, group in enumerate(groups):
