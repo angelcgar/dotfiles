@@ -10,7 +10,7 @@ y luego instalate las dependencias necesarias para ranger
 sudo pacman -S ranger ueberzug
 ```
 
-yo que se, copiate estas configuraciones para usarlo
+copiate estas configuraciones para usarlo
 
 ```
 cp -r .config/ranger ~/.config/
