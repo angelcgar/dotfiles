@@ -7,7 +7,7 @@ git clone https://github.com/angelcgar/dotfiles.git
 y luego instalate las dependencias necesarias para ranger
 
 ```bash
-sudo pacman -S ranger ueberzug
+sudo pacman -S ranger ueberzug chafa
 ```
 
 copiate estas configuraciones para usarlo
