@@ -282,6 +282,8 @@
         <width>50%</width>
       </action>
     </keybind>
+
+
     <!-- UpperQuarterLeft -->
     <keybind key="C-W-Up">
       <action name="UnmaximizeFull"/>
@@ -350,7 +352,7 @@
           <enabled>true</enabled>
           <name>Browser</name>
         </startupnotify>
-        <command>firefox</command>
+        <command>brave</command>
       </action>
     </keybind>
     <!-- File Explorer -->
@@ -360,7 +362,7 @@
           <enabled>true</enabled>
           <name>File Explorer</name>
         </startupnotify>
-        <command>pcmanfm</command>
+        <command>thunar</command>
       </action>
     </keybind>
     <!-- Redshift -->
@@ -419,7 +421,7 @@
           <enabled>true</enabled>
           <name>Vol Low</name>
         </startupnotify>
-        <command>pactl set-sink-volume @DEFAULT_SINK@ -5%</command>
+        <command>pactl set-sink-volume @DEFAULT_SINK@ -2%</command>
       </action>
     </keybind>
     <keybind key="XF86AudioRaiseVolume">
@@ -428,7 +430,7 @@
           <enabled>true</enabled>
           <name>Vol Low</name>
         </startupnotify>
-        <command>pactl set-sink-volume @DEFAULT_SINK@ +5%</command>
+        <command>pactl set-sink-volume @DEFAULT_SINK@ +2%</command>
       </action>
     </keybind>
     <keybind key="XF86AudioMute">
@@ -446,7 +448,7 @@
           <enabled>true</enabled>
           <name>Vol Low</name>
         </startupnotify>
-        <command>brightnessctl set +10%</command>
+        <command>brightnessctl set +5%</command>
       </action>
     </keybind>
     <keybind key="XF86MonBrightnessDown">
@@ -455,7 +457,7 @@
           <enabled>true</enabled>
           <name>Vol Low</name>
         </startupnotify>
-        <command>brightnessctl set 10%-</command>
+        <command>brightnessctl set 5%-</command>
       </action>
     </keybind>
 
@@ -480,6 +482,7 @@
     </keybind>
   </keyboard>
 
+  <!-- Todo shearch more information about this ↓ -->
   <mouse>
     <dragThreshold>4</dragThreshold>
     <doubleClickTime>500</doubleClickTime>
