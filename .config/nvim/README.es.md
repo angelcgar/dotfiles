@@ -1,9 +1,9 @@
 ![Neovim](./neovim.png)
 
-***Idioma***
+**_Idioma_**
+
 - 🇪🇸 Español
 - [🇺🇸 English](https://github.com/antoniosarosi/dotfiles/tree/master/.config/nvim)
-
 
 Para usar esta configuración, primero descarga las dependencias:
 
@@ -25,11 +25,11 @@ sudo pacman -S xsel fzf ripgrep fd the_silver_searcher prettier
 yay -S universal-ctags-git
 ```
 
-Después ejecuta ```:PlugInstall``` dentro de neovim y debería funcionar.
+Después ejecuta `:PlugInstall` dentro de neovim y debería funcionar.
 
 ## Vscode
 
-Copia los archivos ```settings.json``` y ```keybindings.json``` de mi
+Copia los archivos `settings.json` y `keybindings.json` de mi
 [gist](https://gist.github.com/antoniosarosi/eb8d73a580eaa3e7dc32b0b803b4654d).
 y después instala las extensiones
 [Neovim](https://marketplace.visualstudio.com/items?itemName=asvetliakov.vscode-neovim)
@@ -52,7 +52,7 @@ defecto:
 | **shift + <** or **>** | Identar o borrar indentación (visual)   |
 | **shift + k** o **j**  | Mover línea seleccionada abajo o arriba |
 
-***Plugins***:
+**_Plugins_**:
 
 | Atajo         | Acción                                  |
 | ------------- | --------------------------------------- |
@@ -61,3 +61,25 @@ defecto:
 | **space + n** | NerdTree                                |
 | **space + p** | Formatear documento con prettier        |
 | **shift + k** | Documentación de la función o clase     |
+
+## Algún fondo de pantalla para Neovim
+
+```bash
+                         ██   ██
+                        ░██  ██                  ██████
+                        ░██ ██    █████   █████ ░██░░░██
+                        ░████    ██░░░██ ██░░░██░██  ░██
+                        ░██░██  ░███████░███████░██████
+                        ░██░░██ ░██░░░░ ░██░░░░ ░██░░░
+                        ░██ ░░██░░██████░░██████░██
+                        ░░   ░░  ░░░░░░  ░░░░░░ ░░
+                                      ██ ██
+                                     ░██░░            █████
+                 █████   ██████      ░██ ██ ███████  ██░░░██
+                ██░░░██ ██░░░░██  ██████░██░░██░░░██░██  ░██
+               ░██  ░░ ░██   ░██ ██░░░██░██ ░██  ░██░░██████
+               ░██   ██░██   ░██░██  ░██░██ ░██  ░██ ░░░░░██ ██
+               ░░█████ ░░██████ ░░██████░██ ███  ░██  █████ ░░█
+                ░░░░░   ░░░░░░   ░░░░░░ ░░ ░░░   ░░  ░░░░░   ░
+                                  keep growing
+```
