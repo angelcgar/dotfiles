@@ -1,26 +1,28 @@
 # Resumen
 
-Aqui es donde ire poniendo mis configuraciones personales por si algun día me 
-cambio de maquina y le instalo linux, esta guia esta destinada para que sea mas 
-facil el seguimiento de la instalacion de Arco linux, todo de esta distro ya 
-esta listo para descargartela y instalartela lo antes posible, tomare como 
-referencia las dotfiles de saroci y otras configuraciones que ma allan llamado 
+Ultima actualización: 13-07-2025
+
+Aquí es donde ire poniendo mis configuraciones personales por si algún día me
+cambio de maquina y le instalo Linux, esta guía esta destinada para que sea mas
+fácil el seguimiento de la instalación de Arco Linux, todo de esta disto ya
+esta listo para descargarla y instalarla lo antes posible, tomare como
+referencia las dotfiles de Antonio y otras configuraciones que ma hayan llamado
 la atención.
 
-# Instalación de Arco linux
+# Instalación de Arco Linux
 
-Arco linux es facil de instalar a diferencia de Arch linux ya de que tienes la 
+Arco Linux es fácil de instalar a diferencia de Arch Linux ya de que tienes la
 ayuda de calamares el instalador que te facilita la vida al momento de instalar
-una distro, antes de continuar es mejor hasegurarce de que tenemos internet
+una distro, antes de continuar hay que asegurarse que tienes internet.
 
 ```bash
 pacman -S networkmanager
 ```
 
-La mayoria de cosas ya estan listas para ser usadas en la distribucion B pero 
-puedes probar la distribucion D que es un poco mas avanzada.
+La mayoría de cosas ya están listas para ser usadas en la distribución B pero
+puedes probar la distribución D que es un poco mas avanzada.
 
-Ahora nesicitamos estar seguros de que tenemos internet y haremos uso de 
+Ahora necesitamos estar seguros de que tenemos internet y haremos uso de
 networkmanager pero si no lo tienes instalado intentaremos otra cosa
 
 ```bash
@@ -32,13 +34,15 @@ nmcli device wifi connect TU_SSID password TU_CONTRASEÑA
 
 Échale un vistazo a
 [esta página](https://wiki.archlinux.org/index.php/NetworkManager#nmcli_examples)
-para otras opciones proporcionadas por *nmcli*. 
+para otras opciones proporcionadas por *nmcli*.
+
+---
 
 # Inicio de sesión y gestor de ventanas
 
 Primero, necesitamos una forma de iniciar sesión y abrir programas como
 navegadores y terminales, así que empezaremos instalando
-**[lighdm](https://wiki.archlinux.org/index.php/LightDM)**
+**[lightdm](https://wiki.archlinux.org/index.php/LightDM)**
 y **[qtile](https://wiki.archlinux.org/index.php/Qtile)**.
 *lightdm* no funcionará si no instalamos también un
 **[greeter](https://wiki.archlinux.org/index.php/LightDM#Greeter)**.
@@ -49,7 +53,7 @@ en el archivo de configuración. Para editar archivos de configuración
 necesitaremos también un editor de texto, puedes usar
 **[vscode](https://wiki.archlinux.org/index.php/Visual_Studio_Code)**
 o directamente
-**[neovim](https://wiki.archlinux.org/index.php/Neovim)**
+**[Neovim](https://wiki.archlinux.org/index.php/Neovim)**
 si tienes experiencia previa, si no no lo recomiendo. Por último necesitamos un
 navegador.
 
@@ -65,8 +69,8 @@ sudo systemctl enable lightdm
 reboot
 ```
 
-Estos pasos de inicio de sesion son solo para aquellos que tienen una 
-distribucion mas limpia, No es nesesario seguirlos todos si ya tienes todo un 
+Estos pasos de inicio de sesión son solo para aquellos que tienen una
+distribución mas limpia, No es necesario seguirlos todos si ya tienes todo un
 entorno de escritorio instalado y funcional
 
 # Configuración básica de Qtile
@@ -92,8 +96,8 @@ cambia la distribución a español, pero el español latam es ligeramente difere
 setxkbmap es
 ```
 
-Si usaste calamares en la instalacion pedes saltarte este paso ya que de estara
-todo configurado a tus preferencias
+Si usaste calamares en la instalación pedes saltarte este paso ya que de estará
+todo configurado a tus preferencias.
 
 Por defecto, no hay menú, tienes que lanzar programas a través de *xterm*. En
 este punto puedes instalar otro emulador de terminal si lo prefieres:
@@ -117,7 +121,7 @@ contiene la línea siguiente:
 Key([mod], "Return", lazy.spawn("xterm")),
 ```
 
-Edítala para lanzar el emulador de terminal que has instalado:
+Es recomendado editarla para lanzar el emulador de terminal que has instalado:
 
 ```python
 Key([mod], "Return", lazy.spawn("alacritty")),
@@ -149,7 +153,7 @@ rofi-theme-selector
 
 
 Eso es todo en cuanto a Qtile, puedes empezar a trastear con su configuración y
-personalizarlo. Écha un vistazo a mi la configuración de sarosi
+personalizarlo. Echa un vistazo a mi la configuración de Antonio
 [aquí](https://github.com/antoniosarosi/dotfiles/tree/master/.config/qtile).
 Pero antes de eso recomiendo configurar utilidades básicas como audio, batería,
 montaje de unidades de almacenamiento, etc.
@@ -299,11 +303,11 @@ Dentro de esa barra puedes ver los widgets con los que viene por defecto.
 
 Añade tantas pantallas como necesites y copia-pega los widgets, más adelante
 podrás personalizarlos. Ahora puedes volver a *arandr*, darle click en "apply"
-y reiniciar el gestor de ventanats.
+y reiniciar el gestor de ventanas.
 
 Con esto tus monitores deberían funcionar.
 
-Por mi experiencia no he tenido la oportunidad de usar esta seccion
+Por mi experiencia no he tenido la oportunidad de usar esta sección.
 
 ## Almacenamiento
 
@@ -340,7 +344,7 @@ udiskie -t &
 nm-applet &
 ```
 
-Ahora deberías ver unos iconos en la barra, puedes clicar en ellos para
+Ahora deberías ver unos iconos en la barra, puedes hacer click en ellos para
 configurar la red y discos. Puedes instalar también iconos para la batería y
 el volumen:
 
@@ -373,13 +377,13 @@ Name=org.freedesktop.Notifications
 Exec=/usr/lib/notification-daemon-1.0/notification-daemon
 ```
 
-Pruébalo:
+Prueba las notificaciones con:
 
 ```bash
 notification-send "Hola Mundo"
 ```
 
-Aunque este paso no es nesesario si ya tienes xfce4-notifyd
+Aunque este paso no es necesario si ya tienes xfce4-notifyd.
 
 ## Xprofile
 
@@ -431,7 +435,7 @@ makepkg -si
 ```
 
 Con acceso al *Arch User Repository*, puedes instalar prácticamente
-todo el software de este planeta que haya sido pensado para correr en Linux. 
+todo el software de este planeta que haya sido pensado para correr en Linux.
 Usar yay-git o yay-bin es una eleccion personal, puede que ya venga instalado.
 
 ## Media Transfer Protocol
@@ -457,12 +461,12 @@ puedes instalar un explorador de archivos. Para uno gráfico, recomiendo
 **[thunar](https://wiki.archlinux.org/index.php/Thunar)**,
 y para uno basado en terminal,
 **[ranger](https://wiki.archlinux.org/index.php/Ranger)**, aunque este último
-está pensado para usuarios de vim, usalo solo si sabes moverte en vim.
+está pensado para usuarios de vim, úsalo solo si sabes moverte en vim.
 
 ## Basura
 
 Si no quieres usar *rm* constantemente y arriesgarte a perder ficheros,
-necesitas un sistema de basura. Por suerte, es bastante sencillio de hacer
+necesitas un sistema de basura. Por suerte, es bastante sencillo de hacer
 [usando alguna de estas herramientas](https://wiki.archlinux.org/index.php/Trash_management#Trash_creation)
 como **[glib2](https://www.archlinux.org/packages/core/x86_64/glib2/)**,
 y para interfaces gráficas como *thunar* necesitas **[gvfs](https://www.archlinux.org/packages/extra/x86_64/gvfs/)**:
@@ -483,7 +487,7 @@ ls ~/.local/share/Trash/files
 ```
 
 
-########### 
+###########
 
 
 
@@ -513,7 +517,7 @@ sudo mv Material-Black-Blueberry /usr/share/themes
 sudo mv Material-Black-Blueberry-Suru /usr/share/icons
 ```
 
-Ahora edita **~/.gtkrc-2.0** y **~/.config/gtk-3.0/settings.ini** añdiendo
+Ahora edita **~/.gtkrc-2.0** y **~/.config/gtk-3.0/settings.ini** añadiendo
 estas líneas:
 
 ```ini
@@ -556,7 +560,7 @@ gtk-cursor-theme-name = "Breeze"
 gtk-cursor-theme-name = Breeze
 ```
 
-Asegurate de escribir bien los nombres de los temas e iconos, deben ser
+Asegúrate de escribir bien los nombres de los temas e iconos, deben ser
 exactamente los nombres de los directorios donde se encuentran, los que
 ofrece esta salida:
 
@@ -570,7 +574,7 @@ herramientas gráficas para cambiar temas, yo simplemente prefiero la forma
 tradicional de editar ficheros, pero puedes usar
 **[lxappearance](https://www.archlinux.org/packages/community/x86_64/lxappearance/)**,
 que es un programa independiente del entorno de escritorio para realizar esta
-tarea, y te permie previsualizar los temas.
+tarea, y te permite previsualización los temas.
 
 ```bash
 sudo pacman -S lxappearance
@@ -657,13 +661,13 @@ sudo pacman -S vlc
 Con todo lo que has hecho hasta ahora ya tienes todas las herramientas para
 empezar a trastear con las configuraciones y hacer de tu entorno de escritorio,
 bueno, *tu* entorno de escritorio. Lo que recomiendo es empezar añadiendo
-atajaos de teclado para programas típicos como *firefox*, un editor de texto,
+atajos de teclado para programas típicos como *firefox*, un editor de texto,
 explorador de archivos, etc.
 
 Una vez te sientas cómodo con Qtile, puedes instalar otros gestores de ventanas
 y tendrás más sesiones disponibles al iniciar sesión con *lightdm*.
 
-Aqui tienes una lista con las configuraciones de mis gestores de ventanas,
+Aquí tienes una lista con las configuraciones de mis gestores de ventanas,
 cada uno tiene su documentación propia:
 
 - [Qtile](https://github.com/antoniosarosi/dotfiles/tree/master/.config/qtile/README.es.md)
@@ -701,7 +705,7 @@ Estos son algunos atajos de teclado comunes a todos mis gestores de ventanas:
 | **mod + j**             | siguiente ventana                            |
 | **mod + k**             | ventana previa                               |
 | **mod + shift + h**     | aumentar master                              |
-| **mod + shift + l**     | decrementar master                           |
+| **mod + shift + l**     | decremento master                            |
 | **mod + shift + j**     | mover ventana abajo                          |
 | **mod + shift + k**     | mover ventana arriba                         |
 | **mod + shift + f**     | pasar ventana a flotante                     |
@@ -745,7 +749,7 @@ y para *alacritty*, [este](https://github.com/antoniosarosi/dotfiles/tree/master
 | Software                                                                                            | Utilidad                                      |
 | --------------------------------------------------------------------------------------------------- | --------------------------------------------- |
 | **[networkmanager](https://wiki.archlinux.org/index.php/NetworkManager)**                           | Autoexplicativo                               |
-| **[network-manager-applet](https://wiki.archlinux.org/index.php/NetworkManager#nm-applet)**         | *NetworkManager* systray                      |
+| **[network-manager-applet](https://wiki.archlinux.org/index.php/NetworkManager#nm-applet)**         | *NetworkManager* Systray                      |
 | **[pulseaudio](https://wiki.archlinux.org/index.php/PulseAudio)**                                   | Autoexplicativo                               |
 | **[pavucontrol](https://www.archlinux.org/packages/extra/x86_64/pavucontrol/)**                     | *pulseaudio* GUI                              |
 | **[pamixer](https://www.archlinux.org/packages/community/x86_64/pamixer/)**                         | *pulseaudio* CLI                              |
@@ -779,11 +783,8 @@ y para *alacritty*, [este](https://github.com/antoniosarosi/dotfiles/tree/master
 | **[alacritty](https://wiki.archlinux.org/index.php/Alacritty)**       | Emulador de Terminal               |
 | **[thunar](https://wiki.archlinux.org/index.php/Thunar)**             | Gestor de archivos gráfico         |
 | **[ranger](https://wiki.archlinux.org/index.php/Ranger)**             | Gestor de archivos de terminal     |
-| **[neovim](https://wiki.archlinux.org/index.php/Neovim)**             | Editor de texto basado en terminal |
+| **[Neovim](https://wiki.archlinux.org/index.php/Neovim)**             | Editor de texto basado en terminal |
 | **[rofi](https://wiki.archlinux.org/index.php/Rofi)**                 | Menú y navegación                  |
 | **[scrot](https://wiki.archlinux.org/index.php/Screen_capture)**      | Captura de pantalla                |
 | **[redshift](https://wiki.archlinux.org/index.php/Redshift)**         | Cuida tus ojos                     |
 | **[trayer](https://www.archlinux.org/packages/extra/x86_64/trayer/)** | Systray                            |
-
-atentamente su servidor, tratare de darle unas pequeñas actualizaciones para que se vea mucho mejor y
-tal vez algun dia estos archivos tengan algun tipo de valor :)
