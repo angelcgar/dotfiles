@@ -73,13 +73,13 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     ([mod, "shift"], "s", lazy.spawn("scrot -s")),
 
     # Warp termianl
-    ([mod, "shift"], "Return", lazy.spawn("warp-terminal")),
+    # ([mod, "shift"], "Return", lazy.spawn("warp-terminal")),
 
     # Salva pantallas
     ([mod], "x", lazy.spawn("archlinux-logout")),
 
     # betterlockscreen
-    ([mod, "shift"], "x", lazy.spawn(f"betterlockscreen -l dim -- --time-str='%H:%M'")),
+    # ([mod, "shift"], "x", lazy.spawn(f"betterlockscreen -l dim -- --time-str='%H:%M'")),
 
     # ------------ Hardware Configs ------------
 
